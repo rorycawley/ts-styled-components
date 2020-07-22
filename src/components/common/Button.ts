@@ -21,8 +21,6 @@ const Button = styled.button<ButtonProps>`
   background: ${props => (props.secondary ? 'black' : '#f8049c')};
   color: white;
   font-weight: bold;
-  
-  
   box-shadow: none;
   border: none;
   width: 100%;

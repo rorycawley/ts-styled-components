@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
-import { Button } from 'components/common'
+// import { Button } from 'components/common'
 import { createGlobalStyle } from 'styled-components'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { Home, Login } from 'components/pages'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -23,11 +25,21 @@ const App: FC = () => {
     <>
       <GlobalStyle />
       <div data-testid='app'>
-        <h1>App</h1>
-        <Button>Test</Button>
+        <BrowserRouter>
+          <Switch>
+            <Route path='/login'>
+              <Login />
+            </Route>
+            <Route path='/'>
+              <Home />
+            </Route>
+          </Switch>
+        </BrowserRouter>
+        {/* <h1>App</h1>
+         <Button>Test</Button>
         <Button secondary>Test Secondary</Button>
         <Button large>Test Large</Button>
-        <Button disabled>Test disabled</Button>
+        <Button disabled>Test disabled</Button> */}
       </div>
     </>
   )
