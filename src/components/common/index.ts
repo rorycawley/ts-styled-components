@@ -1,2 +1,4 @@
 import Button from './Button'
-export { Button }
+import PageLayout from './PageLayout'
+import Header from './Header'
+export { Button, PageLayout, Header }
