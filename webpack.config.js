@@ -6,14 +6,14 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 module.exports = {
   devtool: 'eval-source-map',
   entry: path.resolve(__dirname, 'src', 'index.tsx'),
-  // output: {
-  //   filename: '[name].[chunkhash].js',
-  //   path: path.resolve(__dirname, 'build')
-  // },
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: '[name].[chunkhash].js',
+    path: path.resolve(__dirname, 'build')
   },
+  // output: {
+  //   filename: 'bundle.js',
+  //   path: path.resolve(__dirname, 'dist')
+  // },
   module: {
     rules: [
       {
@@ -47,6 +47,8 @@ module.exports = {
   ],
   devServer: {
     contentBase: path.resolve(__dirname, 'src'),
-    historyApiFallback: true
+    historyApiFallback: true,
+    compress: true,
+    port: 3000
   }
 }
