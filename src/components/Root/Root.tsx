@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import App from './App'
+import App from 'components/Root/App'
 
 const Root: FC = () => {
   return (

@@ -1,2 +1,4 @@
 jest.config.js
 eslintrc.json
+webpack.config.js
+*.js

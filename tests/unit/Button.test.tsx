@@ -1,17 +1,17 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 
-import Root from 'components/Root'
+import { Button } from 'components/common'
 
-describe('<Root>', () => {
+describe('<Button>', () => {
   it('renders the component', () => {
     // Arrange
-    const component = <Root />
+    const component = <Button>Button Test</Button>
 
     // Act
     render(component)
 
     // Assert
-    expect(screen.getByTestId('root')).toBeInTheDocument()
+    expect(screen.getByText(/Button Test/)).toBeInTheDocument()
   })
 })

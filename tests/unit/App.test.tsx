@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 
-import App from 'src/components/Root/App'
+import App from 'components/Root/App'
 
 describe('<App>', () => {
   it('renders the component', () => {
