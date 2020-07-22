@@ -26,6 +26,7 @@ const App: FC = () => {
         <h1>App</h1>
         <Button>Test</Button>
         <Button secondary>Test Secondary</Button>
+        <Button large>Test Large</Button>
         <Button disabled>Test disabled</Button>
       </div>
     </>

@@ -36,4 +36,15 @@ describe('<Button>', () => {
     // Assert
     expect(screen.getByText(/Button Test Secondary/)).toBeInTheDocument()
   })
+
+  it('renders the a large button', () => {
+    // Arrange
+    const component = <Button large>Button Test Large</Button>
+
+    // Act
+    render(component)
+
+    // Assert
+    expect(screen.getByText(/Button Test Large/)).toBeInTheDocument()
+  })
 })
