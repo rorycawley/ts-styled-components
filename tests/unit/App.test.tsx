@@ -13,5 +13,6 @@ describe('<App>', () => {
 
     // Assert
     expect(screen.getByTestId('app')).toBeInTheDocument()
+    expect(screen.getByText(/App/)).toBeInTheDocument()
   })
 })
