@@ -25,6 +25,7 @@ const App: FC = () => {
       <div data-testid='app'>
         <h1>App</h1>
         <Button>Test</Button>
+        <Button secondary>Test Secondary</Button>
         <Button disabled>Test disabled</Button>
       </div>
     </>
