@@ -1,0 +1,8 @@
+{
+  "name": "ts-styled-components",
+  "repository": "https://github.com/rorycawley/ts-styled-components.git",
+  "version": "1.0.0",
+  "author": "rory cawley <rory.cawley@gmail.com>",
+  "main": "index.js",
+  "license": "MIT"
+}
