@@ -1,10 +1,33 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
-import { Router } from "react-router-dom";
+import { render, screen, getByRole } from "@testing-library/react";
+import { Router, MemoryRouter } from "react-router-dom";
 import { createMemoryHistory } from "history";
 import "@testing-library/jest-dom/extend-expect";
 
 import App from "components/Root/App";
+
+// test utils file
+function renderWithRouter(
+  ui: JSX.Element,
+  {
+    route: string = "/",
+    history = createMemoryHistory({ initialEntries: ["/"] }),
+  } = {}
+) {
+  const Wrapper:
+    | React.ComponentClass<{}, any>
+    | React.FunctionComponent<{}>
+    | undefined = (props: { children?: React.ReactNode }) => (
+    <Router history={history}>{props.children}</Router>
+  );
+  return {
+    ...render(ui, { wrapper: Wrapper }),
+    // adding `history` to the returned utilities to allow us
+    // to reference it in our tests (just try to avoid using
+    // this to test implementation details).
+    history,
+  };
+}
 
 describe("<App>", () => {
   it("renders the App page", () => {
@@ -37,5 +60,18 @@ describe("<App>", () => {
     );
     screen.debug();
     expect(container.innerHTML).toHaveTextContent("404 Not Found");
+  });
+
+  // it('full app rendering/navigating', () => {
+  //   const { container, getByText } = render(<App />, { wrapper: MemoryRouter })
+  //   // verify page content for expected route
+  //   expect(container.innerHTML).toHaveTextContent('Home')
+  // })
+
+  it.skip("landing on a bad page", () => {
+    const { container } = renderWithRouter(<App />, {
+      route: "/something-that-does-not-match",
+    });
+    expect(container.innerHTML).toMatch("404 Not Found");
   });
 });
