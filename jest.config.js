@@ -1,5 +1,3 @@
-/* eslint-disable import/order */
-/* eslint-disable @typescript-eslint/no-var-requires */
 module.exports = {
   moduleDirectories: ['node_modules', 'src'],
 
