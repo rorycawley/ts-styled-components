@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import React from 'react'
 import { render, screen, getByRole } from '@testing-library/react'
 import { Router, MemoryRouter } from 'react-router-dom'

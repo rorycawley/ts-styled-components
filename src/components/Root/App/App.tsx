@@ -1,16 +1,11 @@
-import React, { FC } from "react";
+import React, { FC } from 'react'
 // import { Button } from 'components/common'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
-import { ThemeProvider } from "styled-components";
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import { ThemeProvider } from 'styled-components'
 
-import { Home, Login, FourZeroFour } from "components/pages";
-import { GlobalStyle } from "./GlobalStyle";
-import { theme } from "./theme";
+import { Home, Login, FourZeroFour } from 'components/pages'
+import { GlobalStyle } from './GlobalStyle'
+import { theme } from './theme'
 
 const App: FC = () => {
   return (
@@ -35,6 +30,6 @@ const App: FC = () => {
         <Button disabled>Test disabled</Button> */}
       </div>
     </ThemeProvider>
-  );
-};
-export default App;
+  )
+}
+export default App
