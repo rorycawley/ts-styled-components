@@ -44,17 +44,17 @@ describe('<App>', () => {
     // expect(screen.getAllByText(/Home/)).toBeInTheDocument()
   })
 
-  // it.skip('landing on a bad page shows 404 page', () => {
-  //   const history = createMemoryHistory()
-  //   history.push('/some/bad/route')
-  //   const { container, getByRole } = render(
-  //     <Router history={history}>
-  //       <App />
-  //     </Router>
-  //   )
-  //   screen.debug()
-  //   expect(container.innerHTML).toHaveTextContent('404 Not Found')
-  // })
+  it.skip('landing on a bad page shows 404 page', () => {
+    const history = createMemoryHistory()
+    history.push('/some/bad/route')
+    const { container, getByRole } = render(
+      <Router history={history}>
+        <App />
+      </Router>
+    )
+    screen.debug()
+    expect(container.innerHTML).toHaveTextContent('404 Not Found')
+  })
 
   // it('full app rendering/navigating', () => {
   //   const { container, getByText } = render(<App />, { wrapper: MemoryRouter })
