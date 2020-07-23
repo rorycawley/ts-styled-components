@@ -1,14 +1,15 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+const path = require("path");
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
 module.exports = {
-  devtool: 'eval-source-map',
-  entry: path.resolve(__dirname, 'src', 'index.tsx'),
+  devtool: "eval-source-map",
+  entry: path.resolve(__dirname, "src", "index.tsx"),
   output: {
-    filename: '[name].[chunkhash].js',
-    path: path.resolve(__dirname, 'build')
+    // publicPath: '/',
+    filename: "[name].[chunkhash].js",
+    path: path.resolve(__dirname, "build"),
   },
   // output: {
   //   filename: 'bundle.js',
@@ -19,36 +20,36 @@ module.exports = {
       {
         test: /\.(ts|tsx)?$/,
         exclude: /node_modules/,
-        use: 'ts-loader',
+        use: "ts-loader",
         include: [
-          path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'tests')
-        ]
+          path.resolve(__dirname, "src"),
+          path.resolve(__dirname, "tests"),
+        ],
       },
       {
         test: /\.(jpg|png)$/,
         use: {
-          loader: 'url-loader',
+          loader: "url-loader",
           options: {
-            limit: 25000
-          }
-        }
-      }
-    ]
+            limit: 25000,
+          },
+        },
+      },
+    ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
-    plugins: [new TsconfigPathsPlugin({ configFile: './tsconfig.json' })]
+    extensions: [".tsx", ".ts", ".js"],
+    plugins: [new TsconfigPathsPlugin({ configFile: "./tsconfig.json" })],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'index.html')
-    })
+      template: path.resolve(__dirname, "src", "index.html"),
+    }),
   ],
   devServer: {
-    contentBase: path.resolve(__dirname, 'src'),
+    contentBase: path.resolve(__dirname, "src"),
     historyApiFallback: true,
     compress: true,
-    port: 3000
-  }
-}
+    port: 3000,
+  },
+};

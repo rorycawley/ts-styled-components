@@ -1,9 +1,14 @@
 import React, { FC } from "react";
 // import { Button } from 'components/common'
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 
-import { Home, Login } from "components/pages";
+import { Home, Login, FourZeroFour } from "components/pages";
 import { GlobalStyle } from "./GlobalStyle";
 import { theme } from "./theme";
 
@@ -12,16 +17,17 @@ const App: FC = () => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <div data-testid="app">
-        <BrowserRouter>
+        <Router>
           <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
             <Route path="/login">
               <Login />
             </Route>
-            <Route path="/">
-              <Home />
-            </Route>
+            <Route component={FourZeroFour} />
           </Switch>
-        </BrowserRouter>
+        </Router>
         {/* <h1>App</h1>
          <Button>Test</Button>
         <Button secondary>Test Secondary</Button>
