@@ -5,14 +5,14 @@ import { createMemoryHistory } from "history";
 
 import "@testing-library/jest-dom/extend-expect";
 
-import { Home } from "components/pages";
+import App from "components/Root/App";
 
-describe("<Home>", () => {
-  it("renders the Home page", () => {
+describe("<App>", () => {
+  it("renders the App page", () => {
     const history = createMemoryHistory();
     const { container, getByText } = render(
       <Router history={history}>
-        <Home />
+        <App />
       </Router>
     );
     // Arrange
@@ -23,6 +23,7 @@ describe("<Home>", () => {
 
     // Assert
     expect(container.innerHTML).toMatch("Home");
+    expect(container.innerHTML).toMatch("Login");
 
     // expect(screen.getAllByText(/Home/)).toBeInTheDocument()
   });

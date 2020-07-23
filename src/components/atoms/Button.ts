@@ -1,12 +1,12 @@
-import styled, { StyledComponent, css } from 'styled-components'
+import styled, { StyledComponent, css } from "styled-components";
 
 interface ButtonProps {
-  secondary?: boolean
-  large?: boolean
+  secondary?: boolean;
+  large?: boolean;
 }
 
 const Button = styled.button<ButtonProps>`
-  ${props =>
+  ${(props) =>
     props.large
       ? css`
           padding: 10px;
@@ -18,7 +18,7 @@ const Button = styled.button<ButtonProps>`
           border-radius: 4px;
           font-size: 1em;
         `}
-  background: ${props => (props.secondary ? 'black' : '#f8049c')};
+  background: ${(props) => (props.secondary ? "black" : "#f8049c")};
   color: white;
   font-weight: bold;
   box-shadow: none;
@@ -31,5 +31,5 @@ const Button = styled.button<ButtonProps>`
     background: #eee;
     color: #666;
   }
-`
-export default Button
+`;
+export default Button;

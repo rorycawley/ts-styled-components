@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const HeaderWrapper = styled.header`
   height: 60px;
@@ -10,14 +10,14 @@ const HeaderWrapper = styled.header`
   position: fixed;
   top: 0;
   background-color: #eee;
-`
+`;
 
 const Header = () => {
   return (
     <HeaderWrapper>
-      <Link to='/'>Home</Link>
-      <Link to='/login'>Login</Link>
+      <Link to="/">Home</Link>
+      <Link to="/login">Login</Link>
     </HeaderWrapper>
-  )
-}
-export default Header
+  );
+};
+export default Header;

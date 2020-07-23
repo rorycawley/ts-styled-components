@@ -1,17 +1,29 @@
-import React from 'react'
-import { render, screen } from '@testing-library/react'
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import { Router } from "react-router-dom";
+import { createMemoryHistory } from "history";
 
-import { Login } from 'components/pages'
+import "@testing-library/jest-dom/extend-expect";
 
-describe('<Login>', () => {
-  it('renders the Login page', () => {
+import { Login } from "components/pages";
+
+describe("<Login>", () => {
+  it("renders the Home page", () => {
+    const history = createMemoryHistory();
+    const { container, getByText } = render(
+      <Router history={history}>
+        <Login />
+      </Router>
+    );
     // Arrange
-    const component = <Login />
+    // const component = <Home />
 
     // Act
-    render(component)
+    // render(component)
 
     // Assert
-    expect(screen.getByText(/Login/)).toBeInTheDocument()
-  })
-})
+    expect(container.innerHTML).toMatch("Login");
+
+    // expect(screen.getAllByText(/Login/)).toBeInTheDocument()
+  });
+});

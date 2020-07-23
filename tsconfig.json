@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "outDir": "./dist/",
-    "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "esModuleInterop": true,
@@ -13,6 +11,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": false,
+    "outDir": "./dist/",
     "paths": {
       "src/*": ["./src/*"],
       "components/*": ["./src/components/*"],
@@ -20,10 +19,11 @@
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
+    "sourceMap": true,
     "strict": true,
     "target": "es5",
     "typeRoots": ["node_modules/@types", "src/typings"]
   },
-  "include": ["src/**/*", "tests/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"],
+  "include": ["src/**/*", "tests/**/*"]
 }

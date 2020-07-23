@@ -1,36 +1,23 @@
-import React, { FC } from 'react'
+import React, { FC } from "react";
 // import { Button } from 'components/common'
-import { createGlobalStyle } from 'styled-components'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import { Home, Login } from 'components/pages'
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-
-  body {
-    background-color: white;
-    min-height: 100vh;
-    color: black;
-    font-family: 'Roboto', sans-serif !important;
-  }
-`
+import { Home, Login } from "components/pages";
+import { GlobalStyle } from "./GlobalStyle";
+import { theme } from "./theme";
 
 const App: FC = () => {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <div data-testid='app'>
+      <div data-testid="app">
         <BrowserRouter>
           <Switch>
-            <Route path='/login'>
+            <Route path="/login">
               <Login />
             </Route>
-            <Route path='/'>
+            <Route path="/">
               <Home />
             </Route>
           </Switch>
@@ -41,7 +28,7 @@ const App: FC = () => {
         <Button large>Test Large</Button>
         <Button disabled>Test disabled</Button> */}
       </div>
-    </>
-  )
-}
-export default App
+    </ThemeProvider>
+  );
+};
+export default App;
