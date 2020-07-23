@@ -26,47 +26,45 @@ function renderWithRouter(
 
 describe('<App>', () => {
   it('renders the App page', () => {
+    // Arrange
     const history = createMemoryHistory()
+
+    // Act
     const { container, getByText } = render(
       <Router history={history}>
         <App />
       </Router>
     )
-    // Arrange
-    // const component = <Home />
-
-    // Act
-    // render(component)
 
     // Assert
     expect(container.innerHTML).toMatch('Home')
     expect(container.innerHTML).toMatch('Login')
-
-    // expect(screen.getAllByText(/Home/)).toBeInTheDocument()
   })
 
   it.skip('landing on a bad page shows 404 page', () => {
+    // Arrange
     const history = createMemoryHistory()
     history.push('/some/bad/route')
+
+    // Act
     const { container, getByRole } = render(
       <Router history={history}>
         <App />
       </Router>
     )
-    screen.debug()
+
+    // Assert
     expect(container.innerHTML).toHaveTextContent('404 Not Found')
   })
 
-  // it('full app rendering/navigating', () => {
-  //   const { container, getByText } = render(<App />, { wrapper: MemoryRouter })
-  //   // verify page content for expected route
-  //   expect(container.innerHTML).toHaveTextContent('Home')
-  // })
-
   it.skip('landing on a bad page', () => {
+    // Arrange
+    // Act
     const { container } = renderWithRouter(<App />, {
       route: '/something-that-does-not-match',
     })
+
+    // Assert
     expect(container.innerHTML).toMatch('404 Not Found')
   })
 })
