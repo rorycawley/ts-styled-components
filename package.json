@@ -55,8 +55,10 @@
     "expect-redux": "^5.0.3",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
+    "husky": "^4.2.5",
     "jest": "^26.1.0",
     "jest-environment-jsdom-sixteen": "^1.0.3",
+    "lint-staged": "^10.2.11",
     "msw": "^0.19.5",
     "prettier": "^2.0.5",
     "ts-jest": "^26.1.1",
@@ -83,5 +85,16 @@
     "styled-components": "^5.1.1",
     "whatwg-fetch": "^3.1.0",
     "yup": "^0.29.1"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,md,json,html,css,scss,webmanifest}": "prettier --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "resolutions": {
+    "@types/react": "^16.8.18"
   }
 }
