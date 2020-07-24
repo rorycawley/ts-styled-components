@@ -43,8 +43,8 @@ const Header: FC = () => {
   return (
     <HeaderWrapper>
       <Menu>
-        <Link to="/">Home</Link>
-        <Link to="/login">Login</Link>
+        <StyledLink to="/">Home</StyledLink>
+        <StyledLink to="/login">Login</StyledLink>
       </Menu>
     </HeaderWrapper>
   )
