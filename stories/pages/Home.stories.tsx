@@ -3,12 +3,12 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 
-import { Header } from 'components/molecules'
+import { Home } from 'components/pages'
 import { GlobalStyle } from 'components/Root/App/GlobalStyle'
 
 export default {
-  component: Header,
-  title: 'Header',
+  component: Home,
+  title: 'Home',
   decorators: [
     (storyFn: () => React.ReactNode) => (
       <div>
@@ -21,4 +21,4 @@ export default {
   excludeStories: /.*Data$/,
 }
 
-export const Default = () => <Header />
+export const Default = () => <Home />

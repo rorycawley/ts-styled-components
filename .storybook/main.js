@@ -28,7 +28,9 @@ module.exports = {
       ],
       enforce: 'pre',
     })
-
+    // To get tsconfig baseUrl working
+    // There is likely a better way to extract the baseUrl from tsconfig.
+    config.resolve.modules.push(path.resolve(__dirname, '../src'))
     return { ...config, module: { ...config.module, rules: custom.module.rules } }
   },
 }

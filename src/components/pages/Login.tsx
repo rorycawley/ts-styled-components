@@ -1,5 +1,6 @@
 import React from 'react'
-import { PageLayout } from 'src/components/templates'
+
+import { PageLayout } from 'components/templates'
 
 const Login = () => {
   return <PageLayout>Login</PageLayout>

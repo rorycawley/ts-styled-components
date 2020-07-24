@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
+
 import styled from 'styled-components'
-import Header from '../molecules/Header'
+
+import Header from 'components/molecules/Header'
 
 const Content = styled.main`
   max-width: 800px;

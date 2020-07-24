@@ -1,14 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 
-import { Header } from 'components/molecules'
+import { Login } from 'components/pages'
 import { GlobalStyle } from 'components/Root/App/GlobalStyle'
 
 export default {
-  component: Header,
-  title: 'Header',
+  component: Login,
+  title: 'Login',
   decorators: [
     (storyFn: () => React.ReactNode) => (
       <div>
@@ -21,4 +19,4 @@ export default {
   excludeStories: /.*Data$/,
 }
 
-export const Default = () => <Header />
+export const Default = () => <Login />
