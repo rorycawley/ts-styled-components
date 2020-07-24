@@ -8,7 +8,7 @@ import { GlobalStyle } from 'components/Root/App/GlobalStyle'
 
 export default {
   component: Home,
-  title: 'Home',
+  title: 'Design System/Pages/Home',
   decorators: [
     (storyFn: () => React.ReactNode) => (
       <div>

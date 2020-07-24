@@ -8,7 +8,7 @@ import { GlobalStyle } from '../../src/components/Root/App/GlobalStyle'
 
 export default {
   component: Button,
-  title: 'Button',
+  title: 'Design System/Atoms/Button',
   decorators: [
     (storyFn: () => React.ReactNode) => (
       <div>

@@ -1,12 +1,12 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 
-import { Login } from 'components/pages'
+import App from 'components/Root/App'
 import { GlobalStyle } from 'components/Root/App/GlobalStyle'
 
 export default {
-  component: Login,
-  title: 'Design System/Pages/Login',
+  component: App,
+  title: 'App',
   decorators: [
     (storyFn: () => React.ReactNode) => (
       <div>
@@ -19,4 +19,4 @@ export default {
   excludeStories: /.*Data$/,
 }
 
-export const Default = () => <Login />
+export const Default = () => <App />

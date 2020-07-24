@@ -8,7 +8,7 @@ import { GlobalStyle } from 'components/Root/App/GlobalStyle'
 
 export default {
   component: Header,
-  title: 'Header',
+  title: 'Design System/Molecules/Header',
   decorators: [
     (storyFn: () => React.ReactNode) => (
       <div>
