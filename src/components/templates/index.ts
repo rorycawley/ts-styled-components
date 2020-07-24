@@ -1,2 +1,2 @@
-import PageLayout from "./PageLayout";
-export { PageLayout };
+import PageLayout from './PageLayout'
+export { PageLayout }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
@@ -14,27 +14,38 @@ const HeaderWrapper = styled.header`
   background-color: #eee;
 `
 const Menu = styled.nav`
+  background: none;
+  border-bottom: none;
   display: flex;
+  font-family: 'Roboto';
+  left: initial;
+  margin: auto 0 auto auto;
+  padding: 8px;
   position: relative;
   width: initial;
-  border-bottom: none;
-  margin: auto 0 auto auto;
-  font-family: 'Roboto';
-  background: none;
-  left: initial;
   top: initial;
 `
 
-const MenuAlt = styled(Menu)`
-  border-top: 5px solid black;
+// add style to an existing styled component
+// const MenuAlt = styled(Menu)`
+//   border-top: 5px solid black;
+// `
+
+const StyledLink = styled(Link)`
+  padding: 4px 8px;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+  margin: auto 0;
 `
-const Header = () => {
+
+const Header: FC = () => {
   return (
     <HeaderWrapper>
-      <MenuAlt>
+      <Menu>
         <Link to="/">Home</Link>
         <Link to="/login">Login</Link>
-      </MenuAlt>
+      </Menu>
     </HeaderWrapper>
   )
 }

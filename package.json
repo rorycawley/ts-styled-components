@@ -105,7 +105,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsc && lint-staged && yarn test"
+      "pre-commit": "tsc && lint-staged && yarn test",
+      "post-commit": "git update-index --again"
     }
   },
   "resolutions": {

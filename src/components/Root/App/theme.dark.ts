@@ -1,4 +1,4 @@
 export const themeDark = {
-  primaryColor: "#f8058c",
-  secondaryColor: "#fdd54f",
-};
+  primaryColor: '#000000',
+  secondaryColor: '#ffffff',
+}
