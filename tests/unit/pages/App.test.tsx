@@ -3,7 +3,6 @@ import React from 'react'
 import { render, screen, getByRole } from '@testing-library/react'
 import { Router, MemoryRouter } from 'react-router-dom'
 import { createMemoryHistory } from 'history'
-import '@testing-library/jest-dom/extend-expect'
 
 import App from 'components/Root/App'
 
