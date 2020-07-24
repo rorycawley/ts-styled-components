@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 
-import { Button } from 'src/components/atoms'
+import { Button } from 'components/atoms'
 
 describe('<Button>', () => {
   it('renders the button', () => {
