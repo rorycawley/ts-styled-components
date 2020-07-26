@@ -27,13 +27,7 @@ const Login = () => {
           value={formFields.username}
           placeholder="Username"
         />
-        <PasswordInput
-          onChange={handleInputChange}
-          name="password"
-          type="password"
-          value={formFields.password}
-          placeholder="Password"
-        />
+        <PasswordInput onChange={handleInputChange} type="password" value={formFields.password} />
       </Form>
     </PageLayout>
   )

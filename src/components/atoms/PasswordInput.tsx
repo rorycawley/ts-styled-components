@@ -1,8 +1,17 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React, { useState, ChangeEvent } from 'react'
 import styled from 'styled-components'
 import { Input } from 'components/atoms'
 
-const PasswordInputStyled = styled(Input)`
+interface InputProps {
+  name?: string
+  placeholder?: string
+}
+
+const PasswordInputStyled = styled(Input).attrs<InputProps>(() => ({
+  name: 'password',
+  placeholder: 'Password',
+}))`
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 `
