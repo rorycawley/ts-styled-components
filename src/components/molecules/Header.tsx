@@ -1,6 +1,8 @@
-import React, { FC } from 'react'
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import React, { FC, ReactNode } from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const HeaderWrapper = styled.header`
   height: 60px;
@@ -26,25 +28,31 @@ const Menu = styled.nav`
   top: initial;
 `
 
-// add style to an existing styled component
-// const MenuAlt = styled(Menu)`
-//   border-top: 5px solid black;
-// `
-
-const StyledLink = styled(Link)`
-  padding: 4px 8px;
-  display: block;
-  text-align: center;
-  box-sizing: border-box;
-  margin: auto 0;
+interface StyledLinkProps {
+  isActive?: boolean
+}
+const StyledLink = styled.div`
+  a {
+    padding: 4px 8px;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    margin: auto 0;
+    font-weight: ${(props: StyledLinkProps) => (props.isActive ? 'bold' : 'normal')};
+  }
 `
 
 const Header: FC = () => {
+  const { pathname } = useLocation()
   return (
     <HeaderWrapper>
       <Menu>
-        <StyledLink to="/">Home</StyledLink>
-        <StyledLink to="/login">Login</StyledLink>
+        <StyledLink isActive={pathname === '/'}>
+          <Link to="/">Home</Link>
+        </StyledLink>
+        <StyledLink isActive={pathname === '/login'}>
+          <Link to="/login">Login</Link>
+        </StyledLink>
       </Menu>
     </HeaderWrapper>
   )
