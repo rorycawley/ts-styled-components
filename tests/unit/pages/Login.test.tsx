@@ -19,5 +19,7 @@ describe('<Login>', () => {
 
     // Assert
     expect(container.innerHTML).toMatch('Login')
+    expect(screen.getByRole('textbox')).toBeInTheDocument()
+    expect(screen.getByPlaceholderText('Password')).toBeInTheDocument()
   })
 })

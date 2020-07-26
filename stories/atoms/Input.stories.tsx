@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 import React, { ReactNode } from 'react'
+import { useState } from '@storybook/addons'
 import { action } from '@storybook/addon-actions'
 
 // import { Button } from 'components/atoms'
@@ -24,7 +25,9 @@ export default {
 export const componentData = {}
 
 export const actionsData = {
-  onClick: action('onClick'),
+  onChange: action('onChange'),
 }
 
-export const Default = () => <Input {...componentData} {...actionsData} />
+export const Default = () => {
+  return <Input {...actionsData} />
+}
