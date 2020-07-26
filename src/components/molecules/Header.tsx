@@ -14,19 +14,31 @@ const HeaderWrapper = styled.header`
   padding: 0 16px;
   position: fixed;
   top: 0;
-  background-color: #eee;
+  background-image: linear-gradient(to right, #f8049c, #fdd54f);
+  border-bottom: 3px solid #fdd54f;
 `
 const Menu = styled.nav`
-  background: none;
-  border-bottom: none;
-  display: flex;
+  background: white;
+  border-bottom: 3px solid #fdd54f;
+  box-sizing: border-box;
+  display: block;
   font-family: 'Roboto';
-  left: initial;
-  margin: auto 0 auto auto;
+  left: 0;
   padding: 8px;
-  position: relative;
-  width: initial;
-  top: initial;
+  position: absolute;
+  width: 100%;
+  top: 60px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    background: none;
+    top: initial;
+    left: initial;
+    margin: auto 0 auto auto;
+    border-bottom: none;
+    position: relative;
+    width: initial;
+  }
 `
 
 const Header: FC = () => {

@@ -19,4 +19,5 @@ export const StyledLink = styled(Link)`
   box-sizing: border-box;
   margin: auto 0;
   font-weight: ${(props: LinkProps) => (props.isActive ? 'bold' : 'normal')};
+  color: black;
 `
