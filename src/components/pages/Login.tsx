@@ -1,9 +1,8 @@
 import React, { useState, ChangeEvent } from 'react'
 
-import { PageLayout } from 'components/templates'
-import { Input } from 'components/atoms'
+import { Input, PasswordInput } from 'components/atoms'
 import { Form } from 'components/molecules'
-import { string } from 'yup'
+import { PageLayout } from 'components/templates'
 
 interface FormFields {
   username: string
@@ -28,7 +27,7 @@ const Login = () => {
           value={formFields.username}
           placeholder="Username"
         />
-        <Input
+        <PasswordInput
           onChange={handleInputChange}
           name="password"
           type="password"
