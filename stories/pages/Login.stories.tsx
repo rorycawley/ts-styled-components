@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { action } from '@storybook/addon-actions'
 
 import { Login } from 'components/pages'
@@ -8,7 +8,7 @@ export default {
   component: Login,
   title: 'Design System/Pages/Login',
   decorators: [
-    (storyFn: () => React.ReactNode) => (
+    (storyFn: () => ReactNode) => (
       <div>
         <GlobalStyle />
         {storyFn()}

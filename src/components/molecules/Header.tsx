@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/ban-types */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import React, { FC, ReactNode } from 'react'
+import React, { FC, ReactNode, useState } from 'react'
 import styled from 'styled-components'
 import { useLocation } from 'react-router-dom'
-import { StyledLink } from 'src/components/atoms'
+import { MobileMenuIcon, StyledLink } from 'components/atoms'
 
 const HeaderWrapper = styled.header`
   height: 60px;
@@ -17,11 +17,15 @@ const HeaderWrapper = styled.header`
   background-image: linear-gradient(to right, #f8049c, #fdd54f);
   border-bottom: 3px solid #fdd54f;
 `
-const Menu = styled.nav`
+interface MenuProps {
+  open?: boolean
+}
+const Menu = styled.nav<MenuProps>`
   background: white;
   border-bottom: 3px solid #fdd54f;
   box-sizing: border-box;
-  display: block;
+  display: ${p => (p.open ? 'block' : 'none')};
+
   font-family: 'Roboto';
   left: 0;
   padding: 8px;
@@ -43,9 +47,16 @@ const Menu = styled.nav`
 
 const Header: FC = () => {
   const { pathname } = useLocation()
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <HeaderWrapper>
-      <Menu>
+      <MobileMenuIcon onClick={() => setMenuOpen(s => !s)}>
+        <div />
+        <div />
+        <div />
+      </MobileMenuIcon>
+      <Menu open={menuOpen}>
         <StyledLink to="/" isActive={pathname === '/'}>
           Home
         </StyledLink>

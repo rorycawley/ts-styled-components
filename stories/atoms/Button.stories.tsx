@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { action } from '@storybook/addon-actions'
 
 // import { Button } from 'components/atoms'
@@ -10,7 +10,7 @@ export default {
   component: Button,
   title: 'Design System/Atoms/Button',
   decorators: [
-    (storyFn: () => React.ReactNode) => (
+    (storyFn: () => ReactNode) => (
       <div>
         <GlobalStyle />
         {storyFn()}

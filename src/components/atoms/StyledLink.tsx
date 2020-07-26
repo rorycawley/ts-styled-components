@@ -12,7 +12,7 @@ const Link: FC<LinkProps> = ({ isActive, to, children, ...props }) => (
   </ReactRouterDomLink>
 )
 
-export const StyledLink = styled(Link)`
+const StyledLink = styled(Link)`
   padding: 4px 8px;
   display: block;
   text-align: center;
@@ -21,3 +21,4 @@ export const StyledLink = styled(Link)`
   font-weight: ${(props: LinkProps) => (props.isActive ? 'bold' : 'normal')};
   color: black;
 `
+export default StyledLink

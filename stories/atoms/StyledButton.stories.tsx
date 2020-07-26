@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { action } from '@storybook/addon-actions'
 
 import { StyledLink } from 'components/atoms'
@@ -10,7 +10,7 @@ export default {
   component: StyledLink,
   title: 'Design System/Atoms/StyledLink',
   decorators: [
-    (storyFn: () => React.ReactNode) => (
+    (storyFn: () => ReactNode) => (
       <div>
         <GlobalStyle />
         {storyFn()}
