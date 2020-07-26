@@ -3,8 +3,8 @@ import React from 'react'
 import { action } from '@storybook/addon-actions'
 
 // import { Button } from 'components/atoms'
-import { Button } from '../../src/components/atoms'
-import { GlobalStyle } from '../../src/components/Root/App/GlobalStyle'
+import { Button } from 'components/atoms'
+import { GlobalStyle } from 'components/Root/App/GlobalStyle'
 
 export default {
   component: Button,

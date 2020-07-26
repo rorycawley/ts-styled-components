@@ -2,7 +2,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React, { FC, ReactNode } from 'react'
 import styled from 'styled-components'
-import { Link as ReactRouterDomLink, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import { StyledLink } from 'src/components/atoms'
 
 const HeaderWrapper = styled.header`
   height: 60px;
@@ -26,25 +27,6 @@ const Menu = styled.nav`
   position: relative;
   width: initial;
   top: initial;
-`
-
-export interface LinkProps {
-  isActive?: boolean
-  to: string
-}
-export const Link: FC<LinkProps> = ({ isActive, to, children, ...props }) => (
-  <ReactRouterDomLink to={to} {...props}>
-    {children}
-  </ReactRouterDomLink>
-)
-
-const StyledLink = styled(Link)`
-  padding: 4px 8px;
-  display: block;
-  text-align: center;
-  box-sizing: border-box;
-  margin: auto 0;
-  font-weight: ${(props: LinkProps) => (props.isActive ? 'bold' : 'normal')};
 `
 
 const Header: FC = () => {

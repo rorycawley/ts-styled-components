@@ -7,10 +7,10 @@
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook",
-    "dev": "webpack --mode development",
+    "build": "webpack --mode development",
     "clean": "rm -rf dist && rm -rf coverage && rm -rf node_modules",
     "prebuild": "rm -rf dist && rm -rf coverage && yarn install",
-    "build": "webpack --mode production",
+    "prod": "webpack --mode production",
     "lint": "yarn lint:code",
     "lint:code": "eslint --ext ts,tsx src",
     "prestart": "yarn install",

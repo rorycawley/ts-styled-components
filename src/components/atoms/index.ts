@@ -1,2 +1,3 @@
 import Button from './Button'
-export { Button }
+import { StyledLink } from './StyledLink'
+export { Button, StyledLink }
