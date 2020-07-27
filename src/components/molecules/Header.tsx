@@ -14,15 +14,15 @@ const HeaderWrapper = styled.header`
   padding: 0 16px;
   position: fixed;
   top: 0;
-  background-image: linear-gradient(to right, ${p => p.theme.colors.primary}, #fdd54f);
-  border-bottom: 3px solid #fdd54f;
+  background-image: linear-gradient(to right, ${p => p.theme.colors.primary}, ${p => p.theme.colors.secondary});
+  border-bottom: 3px solid ${p => p.theme.colors.secondary};
 `
 interface MenuProps {
   open?: boolean
 }
 const Menu = styled.nav<MenuProps>`
   background: white;
-  border-bottom: 3px solid #fdd54f;
+  border-bottom: 3px solid ${p => p.theme.colors.secondary};
   box-sizing: border-box;
   display: ${p => (p.open ? 'block' : 'none')};
 
