@@ -18,7 +18,7 @@ const Button = styled.button<{ secondary?: boolean; large?: boolean }>`
           border-radius: 4px;
           font-size: 1em;
         `}
-  background: ${props => (props.secondary ? '#fdd54f' : '#f8049c')};
+  background: ${props => (props.secondary ? props.theme.colors.secondary : props.theme.colors.primary)};
   color: white;
   font-weight: bold;
   box-shadow: none;

@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/ban-types */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import React, { FC, ReactNode, useState } from 'react'
-import styled from 'styled-components'
+import React, { FC, useState, useContext } from 'react'
+import styled, { ThemeContext } from 'styled-components'
 import { useLocation } from 'react-router-dom'
-import { MobileMenuIcon, StyledLink } from 'components/atoms'
+import { MobileMenuIcon, StyledLink, Toggle, ToggleProps } from 'components/atoms'
 
 const HeaderWrapper = styled.header`
   height: 60px;
@@ -48,6 +48,7 @@ const Menu = styled.nav<MenuProps>`
 const Header: FC = () => {
   const { pathname } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
+  const { id, setTheme } = useContext(ThemeContext)
 
   return (
     <HeaderWrapper>
@@ -63,6 +64,7 @@ const Header: FC = () => {
         <StyledLink to="/login" isActive={pathname === '/login'}>
           Login
         </StyledLink>
+        <Toggle isActive={id === 'dark'} onToggle={setTheme} />
       </Menu>
     </HeaderWrapper>
   )

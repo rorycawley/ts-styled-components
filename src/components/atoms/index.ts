@@ -4,4 +4,6 @@ import MobileMenuIcon from './MobileMenuIcon'
 import PasswordInput, { ToggleButton } from './PasswordInput'
 import Spinner from './Spinner'
 import StyledLink from './StyledLink'
-export { Button, StyledLink, MobileMenuIcon, Input, PasswordInput, ToggleButton, Spinner }
+import Toggle, { ToggleProps } from './Toggle'
+export type { ToggleProps }
+export { Button, StyledLink, MobileMenuIcon, Input, PasswordInput, ToggleButton, Spinner, Toggle }

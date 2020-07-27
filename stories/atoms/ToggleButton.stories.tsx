@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions'
 
 // import { Button } from 'components/atoms'
 import { ToggleButton } from 'components/atoms'
-import { GlobalStyle } from 'components/Root/App'
+import { GlobalStyles } from 'components/Root/App'
 
 export default {
   component: ToggleButton,
@@ -13,7 +13,7 @@ export default {
   decorators: [
     (storyFn: () => ReactNode) => (
       <div>
-        <GlobalStyle />
+        <GlobalStyles />
         {storyFn()}
       </div>
     ),

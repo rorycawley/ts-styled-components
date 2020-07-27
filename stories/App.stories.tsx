@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import { action } from '@storybook/addon-actions'
 
-import App, { GlobalStyle } from 'components/Root/App'
+import App, { GlobalStyles } from 'components/Root/App'
 
 export default {
   component: App,
@@ -9,7 +9,7 @@ export default {
   decorators: [
     (storyFn: () => ReactNode) => (
       <div>
-        <GlobalStyle />
+        <GlobalStyles />
         {storyFn()}
       </div>
     ),

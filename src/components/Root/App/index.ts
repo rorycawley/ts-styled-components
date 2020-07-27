@@ -1,6 +1,4 @@
 import App from './App'
-import darkTheme from './theme.dark'
-import GlobalStyle from './GlobalStyle'
-import lightTheme from './theme.light'
+import GlobalStyles from './GlobalStyles'
 export default App
-export { lightTheme, darkTheme, GlobalStyle }
+export { GlobalStyles }

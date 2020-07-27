@@ -13,7 +13,7 @@ describe('<PasswordInput>', () => {
 
     // Assert
     // TODO
-    // expect(screen.getByText(/Button Test/)).toBeInTheDocument()
-    expect(screen.getByRole('textbox')).toBeInTheDocument()
+    expect(screen.getByText(/Show/)).toBeInTheDocument()
+    // expect(screen.getByRole('textbox')).toBeInTheDocument()
   })
 })

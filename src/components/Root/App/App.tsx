@@ -1,15 +1,24 @@
-import React, { FC } from 'react'
+import React, { FC, useState, useContext } from 'react'
 // import { Button } from 'components/common'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
-import { ThemeProvider } from 'styled-components'
 
 import { Home, Login, FourZeroFour } from 'components/pages'
-import { GlobalStyle, lightTheme } from 'components/Root/App'
+import { GlobalStyles } from 'components/Root/App'
+import { lightTheme, darkTheme } from 'src/themes'
+import { ThemeProvider, DefaultTheme } from 'styled-components'
 
 const App: FC = () => {
+  const [theme, setTheme] = useState<DefaultTheme>(lightTheme)
+
   return (
-    <ThemeProvider theme={lightTheme}>
-      <GlobalStyle />
+    <ThemeProvider
+      theme={{
+        ...theme,
+        setTheme: () => {
+          setTheme(s => (s.id === 'light' ? darkTheme : lightTheme))
+        },
+      }}>
+      <GlobalStyles />
       <div data-testid="app">
         <Router>
           <Switch>

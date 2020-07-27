@@ -52,12 +52,10 @@ const PasswordInput = (props: TextFieldProps) => {
   const [showPassword, setShowPassword] = useState(false)
 
   return (
-    <>
-      <PasswordInputWrapper>
-        <PasswordInputStyled {...props} />
-        <ToggleButton onClick={() => setShowPassword(s => !s)}>{showPassword ? 'Hide' : 'Show'}</ToggleButton>
-      </PasswordInputWrapper>
-    </>
+    <PasswordInputWrapper>
+      <PasswordInputStyled {...{ props, type: showPassword ? 'text' : 'password' }} />
+      <ToggleButton onClick={() => setShowPassword(s => !s)}>{showPassword ? 'Hide' : 'Show'}</ToggleButton>
+    </PasswordInputWrapper>
   )
 }
 export default PasswordInput

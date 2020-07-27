@@ -3,7 +3,7 @@ import React, { ReactNode } from 'react'
 import { action } from '@storybook/addon-actions'
 
 import { Spinner } from 'components/atoms'
-import { GlobalStyle } from 'components/Root/App'
+import { GlobalStyles } from 'components/Root/App'
 
 export default {
   component: Spinner,
@@ -11,7 +11,7 @@ export default {
   decorators: [
     (storyFn: () => ReactNode) => (
       <div>
-        <GlobalStyle />
+        <GlobalStyles />
         {storyFn()}
       </div>
     ),

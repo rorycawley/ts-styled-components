@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
     margin: 0;
@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: white;
-    min-height: 100vh;
+
     color: black;
     font-family: 'Roboto', sans-serif !important;
   }
@@ -20,4 +20,4 @@ const GlobalStyle = createGlobalStyle`
     max-width: 100%;
   }  
 `
-export default GlobalStyle
+export default GlobalStyles

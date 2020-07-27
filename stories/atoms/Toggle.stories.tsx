@@ -1,15 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 import React, { ReactNode } from 'react'
-import { useState } from '@storybook/addons'
 import { action } from '@storybook/addon-actions'
 
 // import { Button } from 'components/atoms'
-import { Input } from 'components/atoms'
+import { Toggle } from 'components/atoms'
 import { GlobalStyles } from 'components/Root/App'
 
 export default {
-  component: Input,
-  title: 'Design System/Atoms/Input',
+  component: Toggle,
+  title: 'Design System/Atoms/Toggle',
   decorators: [
     (storyFn: () => ReactNode) => (
       <div>
@@ -22,12 +21,15 @@ export default {
   excludeStories: /.*Data$/,
 }
 
-export const componentData = {}
+export const componentData = {
+  isActive: false,
+}
 
 export const actionsData = {
-  onChange: action('onChange'),
+  onClick: action('onClick'),
 }
 
-export const Default = () => {
-  return <Input {...actionsData} />
-}
+export const Default = () => <Toggle {...componentData} {...actionsData} />
+
+const toggleOffData = { ...componentData, isActive: true }
+export const ToggleOff = () => <Toggle {...toggleOffData} {...actionsData} />

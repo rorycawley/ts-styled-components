@@ -1,12 +1,18 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
+import { ThemeProvider } from 'styled-components'
+import { lightTheme, darkTheme } from 'src/themes'
 
 import { Button } from 'components/atoms'
 
 describe('<Button>', () => {
   it('renders the button', () => {
     // Arrange
-    const component = <Button>Button Test</Button>
+    const component = (
+      <ThemeProvider theme={lightTheme}>
+        <Button>Button Test</Button>
+      </ThemeProvider>
+    )
 
     // Act
     render(component)
@@ -17,7 +23,11 @@ describe('<Button>', () => {
 
   it('renders the a disabled button', () => {
     // Arrange
-    const component = <Button disabled>Button Test Disabled</Button>
+    const component = (
+      <ThemeProvider theme={lightTheme}>
+        <Button disabled>Button Test Disabled</Button>{' '}
+      </ThemeProvider>
+    )
 
     // Act
     render(component)
@@ -28,7 +38,11 @@ describe('<Button>', () => {
 
   it('renders the a secondary button', () => {
     // Arrange
-    const component = <Button secondary>Button Test Secondary</Button>
+    const component = (
+      <ThemeProvider theme={lightTheme}>
+        <Button secondary>Button Test Secondary</Button>{' '}
+      </ThemeProvider>
+    )
 
     // Act
     render(component)
@@ -39,7 +53,11 @@ describe('<Button>', () => {
 
   it('renders the a large button', () => {
     // Arrange
-    const component = <Button large>Button Test Large</Button>
+    const component = (
+      <ThemeProvider theme={lightTheme}>
+        <Button large>Button Test Large</Button>{' '}
+      </ThemeProvider>
+    )
 
     // Act
     render(component)
