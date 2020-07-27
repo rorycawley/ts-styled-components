@@ -22,13 +22,6 @@ const PasswordInputStyled = styled(Input).attrs<InputProps>(() => ({
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 `
-interface TextFieldProps {
-  type?: string
-  placeholder?: string
-  name?: string
-  value?: string
-  onChange?: (event: ChangeEvent<HTMLInputElement>) => void
-}
 
 export const ToggleButton = styled.div`
   height: 40px;
@@ -47,6 +40,14 @@ export const ToggleButton = styled.div`
   user-select: none;
   color: black;
 `
+
+interface TextFieldProps {
+  type?: string
+  placeholder?: string
+  name?: string
+  value?: string
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void
+}
 const PasswordInput = (props: TextFieldProps) => {
   const [showPassword, setShowPassword] = useState(false)
 

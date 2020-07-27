@@ -4,7 +4,7 @@ import React, { ReactNode } from 'react'
 import { action } from '@storybook/addon-actions'
 
 import { Home } from 'components/pages'
-import { GlobalStyle } from 'components/Root/App/GlobalStyle'
+import { GlobalStyle } from 'components/Root/App'
 
 export default {
   component: Home,

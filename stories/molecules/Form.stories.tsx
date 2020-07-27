@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions'
 
 // import { Button } from 'components/atoms'
 import { Form } from 'components/molecules'
-import { GlobalStyle } from 'components/Root/App/GlobalStyle'
+import { GlobalStyle } from 'components/Root/App'
 import { Input } from 'components/atoms'
 
 export default {

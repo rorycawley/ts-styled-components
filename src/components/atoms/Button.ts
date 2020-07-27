@@ -1,11 +1,11 @@
 import styled, { StyledComponent, css } from 'styled-components'
 
-interface ButtonProps {
-  secondary?: boolean
-  large?: boolean
-}
+// interface ButtonProps {
+//   secondary?: boolean
+//   large?: boolean
+// }
 
-const Button = styled.button<ButtonProps>`
+const Button = styled.button<{ secondary?: boolean; large?: boolean }>`
   ${props =>
     props.large
       ? css`

@@ -2,7 +2,8 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import { Router } from 'react-router-dom'
 import { createMemoryHistory } from 'history'
-
+import { ThemeProvider } from 'styled-components'
+import { lightTheme } from 'components/Root/App'
 import { Header } from 'components/molecules'
 
 describe('<Header>', () => {
@@ -12,9 +13,11 @@ describe('<Header>', () => {
 
     // Act
     const { container, getByText, getByRole } = render(
-      <Router history={history}>
-        <Header />
-      </Router>
+      <ThemeProvider theme={lightTheme}>
+        <Router history={history}>
+          <Header />
+        </Router>
+      </ThemeProvider>
     )
 
     // Assert

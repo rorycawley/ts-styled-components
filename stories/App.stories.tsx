@@ -1,8 +1,7 @@
 import React, { ReactNode } from 'react'
 import { action } from '@storybook/addon-actions'
 
-import App from 'components/Root/App'
-import { GlobalStyle } from 'components/Root/App/GlobalStyle'
+import App, { GlobalStyle } from 'components/Root/App'
 
 export default {
   component: App,

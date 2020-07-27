@@ -4,12 +4,11 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 import { ThemeProvider } from 'styled-components'
 
 import { Home, Login, FourZeroFour } from 'components/pages'
-import { GlobalStyle } from './GlobalStyle'
-import { theme } from './theme'
+import { GlobalStyle, lightTheme } from 'components/Root/App'
 
 const App: FC = () => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={lightTheme}>
       <GlobalStyle />
       <div data-testid="app">
         <Router>
