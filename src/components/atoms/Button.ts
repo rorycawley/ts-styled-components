@@ -18,7 +18,7 @@ const Button = styled.button<ButtonProps>`
           border-radius: 4px;
           font-size: 1em;
         `}
-  background: ${props => (props.secondary ? 'black' : '#f8049c')};
+  background: ${props => (props.secondary ? '#fdd54f' : '#f8049c')};
   color: white;
   font-weight: bold;
   box-shadow: none;

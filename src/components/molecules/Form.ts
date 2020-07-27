@@ -9,5 +9,10 @@ const Form = styled.form`
   box-sizing: border-box;
   color: black;
   border-radius: 4px;
+
+  .alt-text {
+    text-align: center;
+    margin: 10px 0;
+  }
 `
 export default Form
